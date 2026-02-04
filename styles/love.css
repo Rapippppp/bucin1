@@ -1,0 +1,73 @@
+body{
+    margin:80px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: calc(100vh - 160px);
+  }
+  
+  .left,.right{
+    display:inline-block
+  }
+  .left{
+    width:170px;
+    height:239px;
+    margin-right:-4px
+  }
+  
+  div>div{
+    display:block;
+    height:34px;
+  }
+  div>div>div{
+    width:30px;
+    height:30px;
+    background-color:red;
+    display:inline-block;
+    float:right;
+    margin:2px;
+  }
+  div.right>div>div{
+    float:left;
+  }
+
+.message {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: #ff4d6d;
+  font-size: 2em;
+  text-align: center;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
+  z-index: 1000;
+  width: 80%;
+  padding: 20px;
+  background-color: rgba(255, 255, 255, 0);
+  border-radius: 15px;
+  pointer-events: none;
+}
+
+.next-button {
+  display: block; /* <-- Ubah dari 'none' menjadi 'block' */
+  position: fixed;
+  bottom: 50px;
+  left: 50%;
+  transform: translateX(-50%); /* Pastikan ini translateX(-50%) agar benar-benar di tengah */
+  padding: 15px 30px;
+  background-color: #ff4d6d;
+  color: white;
+  border: none;
+  border-radius: 25px;
+  font-size: 1.2em;
+  cursor: pointer;
+  z-index: 1000;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+  text-decoration: none; /* Tambahan: agar tidak ada garis bawah pada link */
+}
+
+.next-button:hover {
+  background-color: #ff3357;
+  transform: translateX(-50%) scale(1.05);
+}
